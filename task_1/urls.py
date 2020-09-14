@@ -20,6 +20,6 @@ from flights import views
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('flights/', views.flights_List, name='flights-list'),
-    path('bookings/', views.bookings_List, name='bookings-list'),
+    path('flights/', views.flights_List.as_view(), name='flights-list'),
+    path('bookings/', views.bookings_List.as_view(), name='bookings-list'),
 ]
